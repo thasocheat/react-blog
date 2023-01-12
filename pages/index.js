@@ -1,42 +1,26 @@
-// import type { NextPage } from 'next';
-import Head from 'next/head';
-// import Image from 'next/image'
-import { PostCard, Categories, PostWidget } from '../components';
-import { getPosts } from '../services';
+import React from 'react';
 
-// const posts = [
-//   { title: 'Microsoft Word', excerpt: 'Learn Microsoft Word' },
-//   { title: 'HTML', excerpt: 'Learn HTML' },
-// ];
+const Home = () => {
+return (
+	<div className="container mx-auto px-10 mb-8">
+        
+    <figure class="mt-10 h-auto max-w-lg mx-auto relative max-w-sm transition-all duration-300 filter grayscale hover:grayscale-0">
+        <img class="rounded-xl" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description"/>
+        <figcaption class="absolute px-4 text-lg text-white bottom-6">
+            <p className='text-center'>រុំកិល mouse របស់អ្នកមកលើរូបនោះអ្នកនឹងដឹង ។</p>
+        </figcaption>
+    </figure>
 
-export default function Home({ posts }) {
-  return (
-    <div className="container mx-auto px-10 mb-8">
-      <Head>
-        <title>React Blog</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <div className="lg:col-span-6 col-span-1">
-          {posts.map((post) => (
-            <PostCard post={post.node} key={post.title} />
-          ))}
+      <div className="border-b w-full inline-block border-blue-400 py-8">
+        <div className="md:float-left block">
+          
         </div>
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relatve top-8">
-          <PostWidget />
-          <Categories />
-          </div>
+        <div className="hidden md:float-left md:contents">
+          
         </div>
-      </div> 
+      </div>
     </div>
-  )
-}
+);
+};
 
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-
-  return {
-    props: {posts}
-  }
-}
+export default Home;

@@ -38,7 +38,7 @@ const [relatedPosts, setRelatedPosts] = useState([]);
               alt={post.title}
               height="60px"
               width="60px"
-              className="align-middle rounded-full"
+              className="align-middle"
               src={post.featuredImage.url} />
           </div>
           <div className="flex-grow ml-4">

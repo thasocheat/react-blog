@@ -8,3 +8,7 @@ export { default as Author } from './Author';
 // export { default as CommentsForm } from './CommentsForm';
 // export { default as Comments } from './Comments';
 export { default as Loader } from './Loader';
+export { default as Navbar } from './Navbar';
+export { default as Footer } from './Footer';
+export { default as Logo } from './Logo';
+export { default as PreNext } from './PreNext';

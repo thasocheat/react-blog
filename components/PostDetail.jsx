@@ -42,6 +42,27 @@ const PostDetail = ({ post }) => {
         }
       };
   return (
+    <>
+      <div className="container mx-auto px-10 mb-8">
+      <div className="border-b w-full inline-block border-blue-400 py-8">
+        <nav class="bg-gray-100 px-5 py-3 rounded-md w-full">
+          <ol class="list-reset flex">
+            <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li><a href="/blog" class="text-blue-600 hover:text-blue-700">Blog</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li><a class="text-blue-600 hover:text-blue-700">{post.title}</a></li>
+            {/* <li class="text-gray-500">Data</li> */}
+          </ol>
+        </nav>
+        <div className="md:float-left block">
+          
+        </div>
+        <div className="hidden md:float-left md:contents">
+          
+        </div>
+      </div>
+    </div>
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
@@ -59,9 +80,10 @@ const PostDetail = ({ post }) => {
               <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
             </div>
             <div className="font-medium text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <img className='h-6 w-6 inline mr-2' src="../img/calendar.png" alt="calendar image" width={20}/> 
+              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+              </svg> */}
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
           </div>
@@ -73,6 +95,7 @@ const PostDetail = ({ post }) => {
           })}
         </div>
       </div>
+    </>
   )
 }
 
