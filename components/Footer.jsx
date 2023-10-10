@@ -188,7 +188,7 @@ export default function Footer() {
               <p className="text-center text-sm dark:text-gray-300">
                 Copyright © 2022{" "}
                 <a
-                  href="https://github.com/thasocheat/react-blog"
+                  href="https://github.com/thasocheat"
                   className="font-semibold hover:text-indigo-800 hover:underline dark:hover:text-white"
                 >
                   បង្កើតដោយ ៖ ថា សុជាតិ / Tha Socheat / 
